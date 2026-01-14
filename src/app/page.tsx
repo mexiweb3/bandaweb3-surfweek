@@ -1,3 +1,38 @@
+const carouselImages = [
+  {
+    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    alt: "Atardecer en la playa",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80",
+    alt: "Surfista en ola",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    alt: "Fiesta al atardecer",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?w=800&q=80",
+    alt: "Sunset ocean",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=800&q=80",
+    alt: "Surf lifestyle",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80",
+    alt: "Beach party DJ",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?w=800&q=80",
+    alt: "Sunset silhouette",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=800&q=80",
+    alt: "Surfer wave",
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e]">
@@ -24,6 +59,24 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* Image Carousel */}
+      <section className="relative overflow-hidden py-8 bg-black/30">
+        <div className="flex animate-scroll">
+          {[...carouselImages, ...carouselImages].map((image, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-72 h-48 mx-2 rounded-xl overflow-hidden"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-6 py-16">
