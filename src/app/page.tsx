@@ -15,12 +15,17 @@ export default function Home() {
             <span className="text-sm text-zinc-300">Parte de ETH Cinco de Mayo Pop-Up City</span>
           </div>
 
-          {/* Mascot */}
-          <div className="mb-10">
+          {/* Mascot Gallery */}
+          <div className="mb-10 flex flex-col md:flex-row gap-4 justify-center items-center">
             <img 
               src="/ape-surfing.png" 
               alt="BandaWeb3 Surf Ape" 
-              className="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl shadow-orange-500/30 border border-white/10"
+              className="w-full max-w-md rounded-3xl shadow-2xl shadow-orange-500/30 border border-white/10"
+            />
+            <img 
+              src="/ape-barrel.png" 
+              alt="BandaWeb3 Ape in Barrel" 
+              className="w-full max-w-md rounded-3xl shadow-2xl shadow-cyan-500/30 border border-white/10"
             />
           </div>
 
