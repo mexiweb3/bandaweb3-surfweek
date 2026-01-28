@@ -16,21 +16,31 @@ export default function Home() {
           </div>
 
           {/* Mascot Gallery */}
-          <div className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="mb-10 grid grid-cols-2 md:grid-cols-5 gap-3 max-w-6xl mx-auto">
             <img 
               src="/ape-surfing.png" 
               alt="BandaWeb3 Surf Ape" 
-              className="w-full rounded-3xl shadow-2xl shadow-orange-500/30 border border-white/10 hover:scale-105 transition-transform"
+              className="w-full rounded-2xl shadow-xl shadow-orange-500/30 border border-white/10 hover:scale-105 transition-transform"
             />
             <img 
               src="/ape-barrel.png" 
               alt="BandaWeb3 Ape in Barrel" 
-              className="w-full rounded-3xl shadow-2xl shadow-cyan-500/30 border border-white/10 hover:scale-105 transition-transform"
+              className="w-full rounded-2xl shadow-xl shadow-cyan-500/30 border border-white/10 hover:scale-105 transition-transform"
+            />
+            <img 
+              src="/ape-aerial.png" 
+              alt="BandaWeb3 Ape Aerial" 
+              className="w-full rounded-2xl shadow-xl shadow-yellow-500/30 border border-white/10 hover:scale-105 transition-transform"
+            />
+            <img 
+              src="/ape-bigwave.png" 
+              alt="BandaWeb3 Ape Big Wave" 
+              className="w-full rounded-2xl shadow-xl shadow-blue-500/30 border border-white/10 hover:scale-105 transition-transform"
             />
             <img 
               src="/ape-sunset.png" 
               alt="BandaWeb3 Ape Sunset" 
-              className="w-full rounded-3xl shadow-2xl shadow-rose-500/30 border border-white/10 hover:scale-105 transition-transform"
+              className="w-full rounded-2xl shadow-xl shadow-rose-500/30 border border-white/10 hover:scale-105 transition-transform"
             />
           </div>
 
