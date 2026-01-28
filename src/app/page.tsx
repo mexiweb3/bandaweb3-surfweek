@@ -16,11 +16,11 @@ export default function Home() {
           </div>
 
           {/* Mascot */}
-          <div className="mb-8">
+          <div className="mb-10">
             <img 
               src="/ape-surfing.png" 
-              alt="BandaWeb3 Ape" 
-              className="w-64 h-64 mx-auto object-cover rounded-3xl shadow-2xl shadow-orange-500/20 border border-white/10"
+              alt="BandaWeb3 Surf Ape" 
+              className="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl shadow-orange-500/30 border border-white/10"
             />
           </div>
 
