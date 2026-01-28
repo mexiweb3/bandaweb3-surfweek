@@ -16,16 +16,21 @@ export default function Home() {
           </div>
 
           {/* Mascot Gallery */}
-          <div className="mb-10 flex flex-col md:flex-row gap-4 justify-center items-center">
+          <div className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
             <img 
               src="/ape-surfing.png" 
               alt="BandaWeb3 Surf Ape" 
-              className="w-full max-w-md rounded-3xl shadow-2xl shadow-orange-500/30 border border-white/10"
+              className="w-full rounded-3xl shadow-2xl shadow-orange-500/30 border border-white/10 hover:scale-105 transition-transform"
             />
             <img 
               src="/ape-barrel.png" 
               alt="BandaWeb3 Ape in Barrel" 
-              className="w-full max-w-md rounded-3xl shadow-2xl shadow-cyan-500/30 border border-white/10"
+              className="w-full rounded-3xl shadow-2xl shadow-cyan-500/30 border border-white/10 hover:scale-105 transition-transform"
+            />
+            <img 
+              src="/ape-sunset.png" 
+              alt="BandaWeb3 Ape Sunset" 
+              className="w-full rounded-3xl shadow-2xl shadow-rose-500/30 border border-white/10 hover:scale-105 transition-transform"
             />
           </div>
 
