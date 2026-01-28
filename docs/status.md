@@ -35,7 +35,7 @@
 ### ETH Cinco de Mayo Pop-Up City
 - **Fechas:** Mayo 8-27, 2026
 - **Ubicación:** Puerto Escondido, Oaxaca
-- **Co-hosts:** @ETHCincoDeMayo, @fruteroclub
+- **Co-hosts:** @ETHCincoDeMayo
 
 ### BandaWeb3 Surf Week (Side Event)
 - **Fechas:** Mayo 18-24, 2026
@@ -65,7 +65,6 @@
 |----------|------|--------|
 | Surf Travel & Friends | contacto@surftravelfriends.com | Email enviado |
 | ETH CDM | @ETHCincoDeMayo | Por contactar |
-| Frutero Club | @fruteroclub | Por contactar |
 
 ## Notas
 

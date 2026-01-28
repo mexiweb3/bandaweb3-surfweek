@@ -43,7 +43,7 @@ Spots de surf: La Punta, Carrizalillo
 ## 🤝 Partners
 
 - [ETH Cinco de Mayo](https://twitter.com/ETHCincoDeMayo)
-- [Frutero Club](https://twitter.com/fruteroclub)
+
 - [Surf Travel & Friends](https://www.surftravelfriends.com)
 
 ## 🛠️ Tech Stack

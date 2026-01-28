@@ -46,7 +46,7 @@ git push         # Auto-deploy a Vercel
 ### ETH Cinco de Mayo 2026
 - **Pop-Up City:** Mayo 8-27, Puerto Escondido
 - **Buildathon:** Mayo 14-17, Oaxaca Ciudad
-- **Organizadores:** @ETHCincoDeMayo, @fruteroclub
+- **Organizadores:** @ETHCincoDeMayo
 
 ### BandaWeb3 Surf Week
 - **Fechas:** Mayo 18-24, 2026

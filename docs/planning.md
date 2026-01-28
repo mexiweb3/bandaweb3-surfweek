@@ -6,7 +6,6 @@
 - Fechas: Mayo 8-27, 2026
 - Ubicación: Puerto Escondido, Oaxaca
 - Organizadores: @ETHCincoDeMayo
-- Co-hosts: @fruteroclub
 
 **Oaxaca City Buildathon & Startups Cup**
 - Fechas: Mayo 14-17, 2026
@@ -44,7 +43,6 @@ Mayo 18-24, 2026 (post-Buildathon)
 - Web: [ethcdm.com](https://ethcdm.com)
 
 ### Frutero Club
-- Twitter: [@fruteroclub](https://twitter.com/fruteroclub)
 
 ## Organizador
 
