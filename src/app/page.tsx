@@ -186,6 +186,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Poker Tournament */}
+      <section className="py-32 border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-green-400 font-mono text-sm mb-4">EVENTO ESPECIAL</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                🎰 Poker Night
+              </h2>
+              <p className="text-xl text-zinc-400 mb-6">
+                Torneo de Texas Hold&apos;em en La Punta con vista al mar
+              </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <span className="px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium">
+                  $500 MXN Buy-in
+                </span>
+                <span className="px-4 py-2 bg-white/5 text-zinc-300 rounded-full text-sm">
+                  Máx 20 jugadores
+                </span>
+                <span className="px-4 py-2 bg-white/5 text-zinc-300 rounded-full text-sm">
+                  ~4 horas
+                </span>
+              </div>
+              <a
+                href="/poker"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-semibold rounded-xl hover:bg-green-400 transition-all hover:scale-105"
+              >
+                Ver detalles →
+              </a>
+            </div>
+            <div>
+              <img 
+                src="/ape-poker.png" 
+                alt="Poker Tournament" 
+                className="w-full rounded-3xl shadow-2xl shadow-green-500/20 border border-white/10"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="py-32 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
         <div className="max-w-6xl mx-auto px-6">
