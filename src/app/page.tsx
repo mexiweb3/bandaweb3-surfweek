@@ -35,11 +35,15 @@ export default function Home() {
         
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-sm text-zinc-300">Parte de ETH Cinco de Mayo Pop-Up City</span>
-          </div>
+          {/* ETH Cinco de Mayo Badge */}
+          <a 
+            href="https://twitter.com/ETHCincoDeMayo" 
+            target="_blank"
+            className="inline-flex items-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8 hover:bg-white/10 transition-all"
+          >
+            <img src="/ethcdm-logo-white.svg" alt="ETH Cinco de Mayo" className="h-6" />
+            <span className="text-sm text-zinc-300">Pop-Up City 2026</span>
+          </a>
 
           {/* Image Carousel */}
           <div className="mb-10 relative max-w-2xl mx-auto">
@@ -310,13 +314,21 @@ export default function Home() {
       <section className="py-32 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-zinc-500 font-mono text-sm mb-4">PARTNERS</p>
-            <h2 className="text-3xl font-bold">Colaboradores</h2>
+            <p className="text-zinc-500 font-mono text-sm mb-4">EN EL MARCO DE</p>
+            <a href="https://twitter.com/ETHCincoDeMayo" target="_blank" className="inline-block mb-8 hover:opacity-80 transition-opacity">
+              <img src="/ethcdm-logo-white.svg" alt="ETH Cinco de Mayo" className="h-16 mx-auto" />
+            </a>
+            <p className="text-zinc-400 max-w-lg mx-auto">
+              BandaWeb3 Surf Week es parte de ETH Cinco de Mayo, el Pop-Up City de Web3 más grande de México.
+            </p>
+          </div>
+
+          <div className="text-center mb-8">
+            <p className="text-zinc-500 font-mono text-sm mb-6">COLABORADORES</p>
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-12">
             {[
-              { name: "ETH Cinco de Mayo", handle: "@ETHCincoDeMayo" },
               { name: "Frutero Club", handle: "@fruteroclub" },
               { name: "Surf Travel & Friends", url: "surftravelfriends.com" },
             ].map((partner) => (
