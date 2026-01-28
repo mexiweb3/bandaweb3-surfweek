@@ -323,25 +323,6 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="text-center mb-8">
-            <p className="text-zinc-500 font-mono text-sm mb-6">COLABORADORES</p>
-          </div>
-
-          <div className="flex flex-wrap justify-center items-center gap-12">
-            {[
-              { name: "Surf Travel & Friends", url: "surftravelfriends.com" },
-            ].map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.url ? `https://${partner.url}` : `https://twitter.com/${partner.handle?.slice(1)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-500 hover:text-white transition-colors text-lg font-medium"
-              >
-                {partner.handle || partner.url}
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 
