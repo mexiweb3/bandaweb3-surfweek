@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const apeImages = [
   { src: "/ape-surfing.png", alt: "Surfing", shadow: "shadow-orange-500/30" },
@@ -13,6 +13,14 @@ const apeImages = [
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
+
+  // Auto-play carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % apeImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % apeImages.length);
   const prevImage = () => setCurrentImage((prev) => (prev - 1 + apeImages.length) % apeImages.length);
