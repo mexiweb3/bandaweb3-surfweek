@@ -8,7 +8,7 @@ const apeImages = [
   { src: "/ape-bigwave.png", alt: "Big Wave", shadow: "shadow-blue-500/30" },
   { src: "/ape-sunset.png", alt: "Sunset", shadow: "shadow-rose-500/30" },
   { src: "/ape-poker.png", alt: "Poker Night", shadow: "shadow-green-500/30" },
-  { src: "/ape-camping.png", alt: "Beach Camping", shadow: "shadow-purple-500/30" },
+  { src: "/ape-hammock.png", alt: "Hammock Chill", shadow: "shadow-purple-500/30" },
 ];
 
 export default function Home() {
