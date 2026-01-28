@@ -50,18 +50,22 @@ export default function PokerTournament() {
           <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 mb-12">
             <h3 className="text-2xl font-bold mb-8 text-center">Detalles del Torneo</h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
               <div>
                 <p className="text-4xl font-black text-green-400">$500</p>
                 <p className="text-zinc-400 text-sm mt-1">MXN Buy-in</p>
+              </div>
+              <div>
+                <p className="text-4xl font-black text-green-400">10K</p>
+                <p className="text-zinc-400 text-sm mt-1">Fichas inicio</p>
               </div>
               <div>
                 <p className="text-4xl font-black text-green-400">20</p>
                 <p className="text-zinc-400 text-sm mt-1">Jugadores máx</p>
               </div>
               <div>
-                <p className="text-4xl font-black text-green-400">4</p>
-                <p className="text-zinc-400 text-sm mt-1">Horas máx</p>
+                <p className="text-4xl font-black text-green-400">~4h</p>
+                <p className="text-zinc-400 text-sm mt-1">Duración</p>
               </div>
               <div>
                 <p className="text-4xl font-black text-green-400">3</p>
@@ -76,8 +80,8 @@ export default function PokerTournament() {
             <div className="space-y-4">
               {[
                 { icon: "🃏", title: "Texas Hold'em No Limit", desc: "Formato clásico de torneo" },
-                { icon: "⏱️", title: "Blinds incrementales", desc: "Niveles de 15-20 minutos" },
-                { icon: "🎯", title: "Single table / Multi table", desc: "Dependiendo de inscripciones" },
+                { icon: "🎰", title: "Stack inicial: 10,000 fichas", desc: "Todos empiezan igual" },
+                { icon: "⏱️", title: "Niveles de 20 minutos", desc: "Con break después del nivel 4" },
                 { icon: "🏆", title: "Pago a top 3", desc: "50% / 30% / 20% del prize pool" },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4 bg-white/5 rounded-xl p-4">
@@ -89,6 +93,43 @@ export default function PokerTournament() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Blind Structure */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6">Estructura de Blinds</h3>
+            <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+              <table className="w-full">
+                <thead className="bg-white/5">
+                  <tr>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-zinc-400">Nivel</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-zinc-400">Small Blind</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-zinc-400">Big Blind</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-zinc-400">Ante</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-zinc-400">Duración</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/5">
+                  <tr><td className="px-4 py-3">1</td><td className="px-4 py-3">50</td><td className="px-4 py-3">100</td><td className="px-4 py-3 text-zinc-500">-</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">2</td><td className="px-4 py-3">100</td><td className="px-4 py-3">200</td><td className="px-4 py-3 text-zinc-500">-</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">3</td><td className="px-4 py-3">150</td><td className="px-4 py-3">300</td><td className="px-4 py-3 text-zinc-500">-</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">4</td><td className="px-4 py-3">200</td><td className="px-4 py-3">400</td><td className="px-4 py-3">50</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr className="bg-yellow-500/10"><td className="px-4 py-3 text-yellow-400" colSpan={5}>☕ BREAK - 10 minutos</td></tr>
+                  <tr><td className="px-4 py-3">5</td><td className="px-4 py-3">300</td><td className="px-4 py-3">600</td><td className="px-4 py-3">75</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">6</td><td className="px-4 py-3">400</td><td className="px-4 py-3">800</td><td className="px-4 py-3">100</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">7</td><td className="px-4 py-3">500</td><td className="px-4 py-3">1,000</td><td className="px-4 py-3">100</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">8</td><td className="px-4 py-3">700</td><td className="px-4 py-3">1,400</td><td className="px-4 py-3">200</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr className="bg-yellow-500/10"><td className="px-4 py-3 text-yellow-400" colSpan={5}>☕ BREAK - 10 minutos</td></tr>
+                  <tr><td className="px-4 py-3">9</td><td className="px-4 py-3">1,000</td><td className="px-4 py-3">2,000</td><td className="px-4 py-3">300</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">10</td><td className="px-4 py-3">1,500</td><td className="px-4 py-3">3,000</td><td className="px-4 py-3">400</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">11</td><td className="px-4 py-3">2,000</td><td className="px-4 py-3">4,000</td><td className="px-4 py-3">500</td><td className="px-4 py-3">20 min</td></tr>
+                  <tr><td className="px-4 py-3">12</td><td className="px-4 py-3">3,000</td><td className="px-4 py-3">6,000</td><td className="px-4 py-3">600</td><td className="px-4 py-3">20 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-zinc-500 text-sm mt-4 text-center">
+              ⏱️ Tiempo total estimado: ~4 horas (240 min juego + 20 min breaks)
+            </p>
           </div>
 
           {/* Prize Pool Example */}
