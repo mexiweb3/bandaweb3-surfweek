@@ -1,4 +1,22 @@
+"use client";
+import { useState } from "react";
+
+const apeImages = [
+  { src: "/ape-surfing.png", alt: "Surfing", shadow: "shadow-orange-500/30" },
+  { src: "/ape-barrel.png", alt: "Barrel", shadow: "shadow-cyan-500/30" },
+  { src: "/ape-aerial.png", alt: "Aerial", shadow: "shadow-yellow-500/30" },
+  { src: "/ape-bigwave.png", alt: "Big Wave", shadow: "shadow-blue-500/30" },
+  { src: "/ape-sunset.png", alt: "Sunset", shadow: "shadow-rose-500/30" },
+  { src: "/ape-poker.png", alt: "Poker Night", shadow: "shadow-green-500/30" },
+  { src: "/ape-camping.png", alt: "Beach Camping", shadow: "shadow-purple-500/30" },
+];
+
 export default function Home() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => setCurrentImage((prev) => (prev + 1) % apeImages.length);
+  const prevImage = () => setCurrentImage((prev) => (prev - 1 + apeImages.length) % apeImages.length);
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Hero Section */}
@@ -15,33 +33,46 @@ export default function Home() {
             <span className="text-sm text-zinc-300">Parte de ETH Cinco de Mayo Pop-Up City</span>
           </div>
 
-          {/* Mascot Gallery */}
-          <div className="mb-10 grid grid-cols-2 md:grid-cols-5 gap-3 max-w-6xl mx-auto">
-            <img 
-              src="/ape-surfing.png" 
-              alt="BandaWeb3 Surf Ape" 
-              className="w-full rounded-2xl shadow-xl shadow-orange-500/30 border border-white/10 hover:scale-105 transition-transform"
-            />
-            <img 
-              src="/ape-barrel.png" 
-              alt="BandaWeb3 Ape in Barrel" 
-              className="w-full rounded-2xl shadow-xl shadow-cyan-500/30 border border-white/10 hover:scale-105 transition-transform"
-            />
-            <img 
-              src="/ape-aerial.png" 
-              alt="BandaWeb3 Ape Aerial" 
-              className="w-full rounded-2xl shadow-xl shadow-yellow-500/30 border border-white/10 hover:scale-105 transition-transform"
-            />
-            <img 
-              src="/ape-bigwave.png" 
-              alt="BandaWeb3 Ape Big Wave" 
-              className="w-full rounded-2xl shadow-xl shadow-blue-500/30 border border-white/10 hover:scale-105 transition-transform"
-            />
-            <img 
-              src="/ape-sunset.png" 
-              alt="BandaWeb3 Ape Sunset" 
-              className="w-full rounded-2xl shadow-xl shadow-rose-500/30 border border-white/10 hover:scale-105 transition-transform"
-            />
+          {/* Image Carousel */}
+          <div className="mb-10 relative max-w-2xl mx-auto">
+            {/* Main Image */}
+            <div className="relative">
+              <img 
+                src={apeImages[currentImage].src}
+                alt={apeImages[currentImage].alt}
+                className={`w-full rounded-3xl shadow-2xl ${apeImages[currentImage].shadow} border border-white/10 transition-all duration-300`}
+              />
+              
+              {/* Navigation Arrows */}
+              <button 
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-2xl transition-all"
+              >
+                ←
+              </button>
+              <button 
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-2xl transition-all"
+              >
+                →
+              </button>
+            </div>
+
+            {/* Image Label */}
+            <p className="mt-4 text-zinc-400 text-sm">{apeImages[currentImage].alt}</p>
+
+            {/* Dots */}
+            <div className="flex justify-center gap-2 mt-4">
+              {apeImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImage(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentImage ? "bg-orange-400 w-6" : "bg-white/30 hover:bg-white/50"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Title */}
