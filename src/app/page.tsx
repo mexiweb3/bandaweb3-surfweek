@@ -329,7 +329,6 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center items-center gap-12">
             {[
-              { name: "Frutero Club", handle: "@fruteroclub" },
               { name: "Surf Travel & Friends", url: "surftravelfriends.com" },
             ].map((partner) => (
               <a
