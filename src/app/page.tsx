@@ -11,8 +11,10 @@ const apeImages = [
   { src: "/ape-hammock.png", alt: "Hammock Chill", shadow: "shadow-purple-500/30" },
   { src: "/troopdegen-surf.png", alt: "troopdegen surfing", shadow: "shadow-pink-500/30" },
   { src: "/troopdegen-hammock.png", alt: "troopdegen hammock", shadow: "shadow-purple-500/30" },
-  { src: "/poker-headsup.png", alt: "Poker Heads-Up", shadow: "shadow-green-500/30" },
+  { src: "/poker-final.png", alt: "Poker mexi vs troop", shadow: "shadow-green-500/30" },
   { src: "/troopdegen-bikini.png", alt: "troopdegen beach", shadow: "shadow-rose-500/30" },
+  { src: "/secreto-montana.png", alt: "Secreto en la montaña", shadow: "shadow-purple-500/30" },
+  { src: "/jetski-ola-gigante.png", alt: "Jetski ola gigante", shadow: "shadow-cyan-500/30" },
 ];
 
 export default function Home() {
